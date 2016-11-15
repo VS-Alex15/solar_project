@@ -81,9 +81,9 @@ def parse_planet_parameters(line, planet):
     **planet** — объект планеты.
     """
     inf_planet  = line.split()
-    planet.R =int(inf_planet[1])
+    planet.R = int(inf_planet[1])
     planet.color = inf_planet[2]
-    planet.m =float(inf_planet[3])
+    planet.m = float(inf_planet[3])
     planet.x = float(inf_planet[4])
     planet.y = float(inf_planet[5])
     planet.Vx = float(inf_planet[6])
@@ -106,7 +106,7 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     """
     with open(output_filename, 'w') as out_file:
         for obj in space_objects:
-            print(out_file, "%s %d %s %f" % (obj.R, obj.m, obj.x, obj.y, obj.Vx, obj.Vy))
+            print(out_file, "%s %d %s %f %s %d %s %f" % (obj.R, obj.m, obj.x, obj.y, obj.Vx, obj.Vy, obj.type, obj.color ))
             # aaaFIXME: should store real values
 
 # FIXME: хорошо бы ещё сделать функцию, сохранающую статистику в заданный файл...
