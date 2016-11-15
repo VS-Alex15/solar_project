@@ -80,6 +80,7 @@ def create_planet_image(space, planet):
     **space** — холст для рисования.
     **planet** — объект планеты.
     """
+
     pass  # FIXME: сделать как у звезды
 
 
