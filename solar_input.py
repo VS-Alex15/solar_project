@@ -104,12 +104,12 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     **output_filename** — имя входного файла
     **space_objects** — список объектов планет и звёзд
     """
-    with open(output_filename, 'w') as out_file:
-        for obj in space_objects:
-            print(out_file, "%s %d %s %f %s %d %s %f" % (obj.type, obj.R, obj.color, obj.m, obj.x, obj.y, obj.Vx, obj.Vy))
+    output = open(output_filename, 'w')
+    for obj in space_objects:
+       output.write(obj.type+' '+str(obj.R)+ obj.color + ' '+ str(obj.m)+' ' +str(obj.x)+' ' +str(obj.y)+' ' +str(obj.Vx)+' ' +str(obj.Vy) +'\n')
             # aaaFIXME: should store real values
 
-# FIXME: хорошо бы ещё сделать функцию, сохранающую статистику в заданный файл...
+            # FIXME: хорошо бы ещё сделать функцию, сохранающую статистику в заданный файл...
 
 if __name__ == "__main__":
     print("This module is not for direct call!")
